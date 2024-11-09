@@ -18,7 +18,11 @@
     <header>
       <div>
         <div id="menu-bar">
-          <ion-icon name="menu-outline"></ion-icon>
+          <ion-icon
+            name="menu-outline"
+            onclick="toggleMenu()"
+            id="menu-icon"
+          ></ion-icon>
         </div>
 
         <div>
@@ -31,8 +35,8 @@
       </div>
 
       <div>
-        <div>
-          <div>
+        <div id="searchbar">
+          <div id="search-icon">
             <ion-icon name="search-outline"></ion-icon>
           </div>
           <input placeholder="Search Quiz" />
@@ -40,8 +44,11 @@
       </div>
 
       <div>
-        <div>+</div>
-        <div>
+        <div id="add-icon">
+          <ion-icon name="add-outline"></ion-icon>
+          <p>Create Quiz</p>
+        </div>
+        <div id="profile-icon">
           <ion-icon name="person-circle-outline"></ion-icon>
         </div>
       </div>
@@ -51,179 +58,96 @@
       <div>
         <ul>
           <li>
-            <ion-icon name="home-outline"></ion-icon>
-            <a>Home</a>
+            <ion-icon name="home-outline" class="nav-icon"></ion-icon>
+            <a class="collapse">Home</a>
           </li>
           <li>
-            <ion-icon name="folder-outline"></ion-icon>
-            <a>Library</a>
+            <ion-icon name="folder-outline" class="nav-icon"></ion-icon>
+            <a class="collapse">Library</a>
           </li>
           <li>
-            <ion-icon name="notifications-outline"></ion-icon>
-            <a>Notifications</a>
+            <ion-icon name="notifications-outline" class="nav-icon"></ion-icon>
+            <a class="collapse">Notifications</a>
           </li>
         </ul>
       </div>
 
-      <hr />
-
       <div>
         <div>
-          <p>Start Here</p>
+          <p class="collapse">Start Here</p>
         </div>
 
         <ul>
           <li>
-            <ion-icon name="albums-outline"></ion-icon>
-            <a>Flashcards</a>
+            <ion-icon name="albums-outline" class="nav-icon"></ion-icon>
+            <a class="collapse">Flashcards</a>
           </li>
           <li>
-            <ion-icon name="book-outline"></ion-icon>
-            <a>Expert Solutions</a>
+            <ion-icon name="book-outline" class="nav-icon"></ion-icon>
+            <a class="collapse">Expert Solutions</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <main>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
+    <main id="main">
+      <div class="container">
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
 
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
 
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
 
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
-      <div>HELLOOO CARD NI</div>
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
+
+  <script src="main.js"></script>
 </html>
