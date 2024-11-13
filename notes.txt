@@ -1,0 +1,79 @@
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Recent</h3>
+          <div class="section-body">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </section>
+
+
+
+
+
+        <div id="add-card-page">
+          <section id="add-card-header">
+            <h1>Create a new flashcard set</h1>
+            <div>
+              <input
+                placeholder="Enter title, like 'Biology - Chapter 22: Evolution'"
+                name="title"
+                id="title"
+                class="header-input"
+              />
+              <textarea
+                placeholder="Add a description.."
+                name="description"
+                id="description"
+                class="header-input"
+              ></textarea>
+            </div>
+          </section>
+
+          <section id="add-card-body"></section>
+        </div>

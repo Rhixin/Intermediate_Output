@@ -14,3 +14,55 @@ function toggleMenu() {
     }
   });
 }
+
+function toggleProfileModal() {
+  const profile_modal = document.getElementById("profile-modal");
+  profile_modal.classList.toggle("active");
+
+  const add_modal = document.getElementById("add-modal");
+  add_modal.classList.remove("active");
+}
+
+function toggleAddModal() {
+  const add_modal = document.getElementById("add-modal");
+  add_modal.classList.toggle("active");
+
+  const profile_modal = document.getElementById("profile-modal");
+  profile_modal.classList.remove("active");
+}
+
+function FlashcardPage() {
+  const container = document.getElementById("dynamic-container");
+
+  // Check if container exists
+  if (!container) {
+    console.error("Container with id 'dynamic-container' not found.");
+    return;
+  }
+
+  // Declare the content string properly
+  const content = `<div id="add-card-page">
+          <section id="add-card-header">
+            <h1>Create a new flashcard set</h1>
+            <div>
+              <input
+                placeholder="Enter title, like 'Biology - Chapter 22: Evolution'"
+                name="title"
+                id="title"
+                class="header-input"
+              />
+              <textarea
+                placeholder="Add a description.."
+                name="description"
+                id="description"
+                class="header-input"
+              ></textarea>
+            </div>
+          </section>
+
+          <section id="add-card-body"></section>
+        </div>`;
+
+  // Add content to the container
+  container.innerHTML = content;
+}

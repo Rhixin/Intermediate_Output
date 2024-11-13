@@ -44,14 +44,60 @@
       </div>
 
       <div>
-        <div id="add-icon">
+        <div id="add-icon" onclick="toggleAddModal()" class="clickable">
           <ion-icon name="add-outline"></ion-icon>
           <p>Create Quiz</p>
         </div>
-        <div id="profile-icon">
+        <div id="profile-icon" onclick="toggleProfileModal()" class="clickable">
           <ion-icon name="person-circle-outline"></ion-icon>
         </div>
       </div>
+
+      <nav id="add-modal" class="modal">
+        <a onclick="FlashcardPage()" class="clickable">
+          <ion-icon name="reader-outline"></ion-icon>
+          Flashcard set
+        </a>
+        <a class="clickable">
+          <ion-icon name="folder-outline" id="settings-icon"></ion-icon>
+          Folder
+        </a>
+      </nav>
+
+      <nav id="profile-modal" class="modal">
+        <div id="profile-modal-section-1">
+          <div>
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </div>
+          <div>
+            <p class="username">Zhazted</p>
+            <p class="email">vallestedted@gmail.com</p>
+          </div>
+        </div>
+
+        <div>
+          <a>
+            <ion-icon name="trophy-outline" id="trophy-icon"></ion-icon>
+            Achievements
+          </a>
+          <a>
+            <ion-icon name="settings-outline" id="settings-icon"></ion-icon>
+            Settings
+          </a>
+          <a>
+            <ion-icon name="moon-outline" id="dark-mode-icon"></ion-icon>
+            Dark Mode
+          </a>
+        </div>
+        <div>
+          <a>Log Out</a>
+        </div>
+        <div>
+          <a>Privacy Policy</a>
+          <a>Help and feedback</a>
+          <a>Upgrade</a>
+        </div>
+      </nav>
     </header>
 
     <nav>
@@ -91,7 +137,7 @@
     </nav>
 
     <main id="main">
-      <div class="container">
+      <div class="container" id="dynamic-container">
         <section>
           <h3>Recent</h3>
           <div class="section-body">
