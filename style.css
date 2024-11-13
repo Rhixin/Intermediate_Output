@@ -303,3 +303,50 @@ section {
   outline: none;
   box-shadow: none;
 }
+
+.input-item {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.input-item > :first-child {
+  border-bottom: 3px solid var(--background-color);
+  color: var(--gray-dark-color);
+}
+.input-item > div {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.item-title,
+.item-definition {
+  flex: 1;
+}
+
+.input-field {
+  width: 90%;
+  border: none;
+  border-bottom: 1.5px solid #2d3653;
+  outline: none;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: black;
+}
+
+.input-field::placeholder {
+  color: var(--gray-dark-color);
+  font-size: 0.8rem;
+}
+
+.input-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--gray-dark-color);
+  text-transform: uppercase;
+}

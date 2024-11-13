@@ -41,7 +41,8 @@ function FlashcardPage() {
   }
 
   // Declare the content string properly
-  const content = `<div id="add-card-page">
+  const content = `
+        <div id="add-card-page">
           <section id="add-card-header">
             <h1>Create a new flashcard set</h1>
             <div>
@@ -60,7 +61,39 @@ function FlashcardPage() {
             </div>
           </section>
 
-          <section id="add-card-body"></section>
+          <section id="add-card-body">
+            <div class="input-item">
+              <div>
+                <h4>1</h4>
+              </div>
+
+              <div>
+                <div class="item-title">
+                  <input
+                    type="text"
+                    name="term"
+                    class="input-field"
+                    placeholder="Enter Title"
+                  />
+                  <div class="input-footer">
+                    <span>TITLE</span>
+                  </div>
+                </div>
+
+                <div class="item-definition">
+                  <input
+                    type="text"
+                    name="definition"
+                    class="input-field"
+                    placeholder="Enter Title"
+                  />
+                  <div class="input-footer">
+                    <span>DEFINITION</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>`;
 
   // Add content to the container
