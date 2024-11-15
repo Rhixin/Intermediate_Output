@@ -387,3 +387,34 @@ textarea {
 #add-card-footer:hover * {
   color: var(--primary-color);
 }
+
+#save-quiz-wrapper button {
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  padding: 1.5rem 3rem;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+#save-quiz-wrapper {
+  display: flex;
+  justify-content: right;
+}
+
+.input-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-item-header div {
+  padding: 0.2rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-item-header div:hover {
+  background-color: var(--background-color);
+}

@@ -62,62 +62,49 @@ function FlashcardPage() {
           </section>
 
           <section id="add-card-body">
-            <div class="input-item">
-              <div>
-                <h4>1</h4>
-              </div>
-
-              <div>
-                <div class="item-title">
-                  <input
-                    type="text"
-                    name="term"
-                    class="input-field"
-                    placeholder="Enter Title"
-                  />
-                  <div class="input-footer">
-                    <span>TITLE</span>
-                  </div>
-                </div>
-
-                <div class="item-definition">
-                  <input
-                    type="text"
-                    name="definition"
-                    class="input-field"
-                    placeholder="Enter Title"
-                  />
-                  <div class="input-footer">
-                    <span>DEFINITION</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </section>
 
           <section
             id="add-card-footer"
             class="clickable"
-            onclick="createInputFlashcardComponent(2)"
+            onclick="createInputFlashcardComponent()"
           >
             <ion-icon name="add-circle-outline"></ion-icon>
             <h5>ADD A CARD</h5>
           </section>
 
-          <section>
-            <button>Save</button>
+          <section id="save-quiz-wrapper">
+            <button id="save-quiz-btn" class="clickable">Save</button>
           </section>
         </div>`;
 
   // Add content to the container
   container.innerHTML = content;
+
+  createInputFlashcardComponent();
 }
 
-function createInputFlashcardComponent(id) {
+function createInputFlashcardComponent() {
+  container = document.getElementById("add-card-body");
+
+  let count = 0;
+
+  container.childNodes.forEach((node) => {
+    if (node.nodeType === 1 && node.classList.contains("input-item")) {
+      count++;
+    }
+  });
+
+  count += 1;
+
   content = `
-            <div class="input-item">
-              <div>
-                <h4>${id}</h4>
+            <div class="input-item" id="input-item-${count}">
+              <div class="input-item-header">
+                <h4 class="id-text">${count}</h4>
+                <div class="clickable" onclick="deleteInputItem(${count})">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </div>
               </div>
 
               <div>
@@ -125,11 +112,11 @@ function createInputFlashcardComponent(id) {
                   <input
                     type="text"
                     name="term"
-                    class="input-field"
+                    class="input-field input-term"
                     placeholder="Enter Title"
                   />
                   <div class="input-footer">
-                    <span>TITLE</span>
+                    <span>TERM</span>
                   </div>
                 </div>
 
@@ -137,7 +124,7 @@ function createInputFlashcardComponent(id) {
                   <input
                     type="text"
                     name="definition"
-                    class="input-field"
+                    class="input-field input-definition"
                     placeholder="Enter Title"
                   />
                   <div class="input-footer">
@@ -148,7 +135,32 @@ function createInputFlashcardComponent(id) {
             </div>
     `;
 
-  container = document.getElementById("add-card-body");
-
   container.innerHTML += content;
+}
+
+function deleteInputItem(id) {
+  let container = document.getElementById("add-card-body");
+  let itemToDelete = document.getElementById(`input-item-${id}`);
+  let inputElement = itemToDelete.querySelector("input"); // Get the input element
+
+  // Store the input value
+  let inputValue = inputElement ? inputElement.value : "";
+
+  // Delete the item
+  container.removeChild(itemToDelete);
+
+  // Reorder remaining items and preserve input values
+  let remainingItems = container.querySelectorAll(".input-item");
+  remainingItems.forEach((item, index) => {
+    // Update the item's ID
+    item.id = `input-item-${index + 1}`;
+    let idTextElement = item.querySelector(".id-text");
+    idTextElement.textContent = `${index + 1}`;
+
+    // If the item contains an input, restore its value
+    let input = item.querySelector("input");
+    if (input) {
+      input.value = inputValue; // Reapply the stored value
+    }
+  });
 }
