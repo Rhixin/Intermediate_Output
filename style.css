@@ -266,6 +266,7 @@ main {
 section {
   margin: 2rem 0;
 }
+
 .section-body {
   display: flex;
   height: auto;
@@ -288,6 +289,18 @@ section {
 #add-card-header div {
   display: flex;
   flex-direction: column;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#add-card-header input {
+  font-size: 1.2rem;
+}
+
+#add-card-header input::placeholder {
+  font-size: 0.8rem;
 }
 
 .header-input {
@@ -330,7 +343,7 @@ section {
 .input-field {
   width: 90%;
   border: none;
-  border-bottom: 1.5px solid #2d3653;
+  border-bottom: 2px solid var(--gray-dark-color);
   outline: none;
   padding: 0.5rem 0;
   font-size: 1rem;
@@ -342,6 +355,10 @@ section {
   font-size: 0.8rem;
 }
 
+.input-field:focus {
+  border-bottom: 4px solid var(--primary-color);
+}
+
 .input-footer {
   display: flex;
   justify-content: space-between;
@@ -349,4 +366,24 @@ section {
   font-size: 0.8rem;
   color: var(--gray-dark-color);
   text-transform: uppercase;
+}
+#add-card-footer ion-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+#add-card-footer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  color: var(--gray-dark-color);
+}
+
+#add-card-footer:hover * {
+  color: var(--primary-color);
 }

@@ -94,8 +94,61 @@ function FlashcardPage() {
               </div>
             </div>
           </section>
+
+          <section
+            id="add-card-footer"
+            class="clickable"
+            onclick="createInputFlashcardComponent(2)"
+          >
+            <ion-icon name="add-circle-outline"></ion-icon>
+            <h5>ADD A CARD</h5>
+          </section>
+
+          <section>
+            <button>Save</button>
+          </section>
         </div>`;
 
   // Add content to the container
   container.innerHTML = content;
+}
+
+function createInputFlashcardComponent(id) {
+  content = `
+            <div class="input-item">
+              <div>
+                <h4>${id}</h4>
+              </div>
+
+              <div>
+                <div class="item-title">
+                  <input
+                    type="text"
+                    name="term"
+                    class="input-field"
+                    placeholder="Enter Title"
+                  />
+                  <div class="input-footer">
+                    <span>TITLE</span>
+                  </div>
+                </div>
+
+                <div class="item-definition">
+                  <input
+                    type="text"
+                    name="definition"
+                    class="input-field"
+                    placeholder="Enter Title"
+                  />
+                  <div class="input-footer">
+                    <span>DEFINITION</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+    `;
+
+  container = document.getElementById("add-card-body");
+
+  container.innerHTML += content;
 }
