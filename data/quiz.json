@@ -1,0 +1,55 @@
+[
+  {
+    "quiz_id": 1,
+    "title": "Basic Math",
+    "description": "Practice multiplication, addition, subtraction, and division",
+    "questions": [
+      { "card_id": 1, "term": "What is 1 + 1", "definition": "2" },
+      { "card_id": 2, "term": "What is 5 * 1", "definition": "5" }
+    ]
+  },
+  {
+    "quiz_id": 2,
+    "title": "Science",
+    "description": "Study different types of cells",
+    "questions": [
+      {
+        "card_id": 1,
+        "term": "Powerhouse of the cell",
+        "definition": "Mitochondria"
+      },
+      {
+        "card_id": 2,
+        "term": "What is Eukaryote",
+        "definition": "Only one idk"
+      }
+    ]
+  },
+  {
+    "quiz_id": 3,
+    "title": "Biology",
+    "description": "Review about branch of science that deals with living organisms and their vital processes. Biology encompasses diverse fields, including botany, conservation, ecology, evolution, genetics, marine biology, medicine, microbiology, molecular biology, physiology, and zoology. Review about branch of science that deals with living organisms and their vital processes. Biology encompasses diverse fields, including botany, conservation, ecology, evolution, genetics, marine biology, medicine, microbiology, molecular biology, physiology, and zoology",
+    "questions": [
+      {
+        "card_id": 1,
+        "term": "Cells",
+        "definition": "Basic building blocks of life and have many topics to discuss, including their structure, functions, and history"
+      },
+      {
+        "card_id": 2,
+        "term": "Respiration",
+        "definition": "What is the process that releases carbon dioxide as a waste product in living things?"
+      },
+      {
+        "card_id": 3,
+        "term": "Kingdom, Phylum, Class, Order, Genus, Family, and Species",
+        "definition": "What are the taxonomic categories of living things from least specific to most specific?"
+      },
+      {
+        "card_id": 4,
+        "term": "Tooth Enamel",
+        "definition": "What is the hardest substance in the human body?"
+      }
+    ]
+  }
+]

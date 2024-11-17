@@ -1,0 +1,3 @@
+RUN THIS FIRST TO START SERVER
+
+php -S [localhost]

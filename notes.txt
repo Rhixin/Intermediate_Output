@@ -136,4 +136,48 @@
           </section>
         </div>
 
-        
+
+       
+        <div class="card">
+
+            <div class="card-title">
+              <h3>TITLE HEREEE</h3>
+              <div>
+                <p>18 items</p>
+              </div>
+            </div
+
+            <div class="card-description">
+              <p>the topic is about this and thuis</p>
+            </div>
+
+            <div class="card-author">
+                <ion-icon name="person-circle-outline"></ion-icon>
+
+                <div>
+                  <p>Zhazted</p>                     
+                </div>                 
+            </div>         
+        </div>
+
+<div class="card">
+  <div class="card-title">
+    <h3>Biology</h3>
+    <div>
+      <p>18 items</p>
+    </div>
+  </d
+  <div class="card-description">
+    <p>the topic is about this and thuis</p>
+  </d
+  <div class="card-author">
+    
+    <ion-icon name="person-circle-outline"></ion-icon>
+    
+    <div>
+      <p>Zhazted</p>                     
+    </div>                 
+  </div>
+
+</div>
+
