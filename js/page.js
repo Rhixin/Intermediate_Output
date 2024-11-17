@@ -71,6 +71,9 @@ function HomePage() {
               <button class="carousel-button next" onclick="scrollSection(1)">❯</button>
             </div>
         </section>
+
+
+        
         <section>
           <h3>Suggested</h3>
           <div class="carousel-container">
@@ -125,11 +128,48 @@ function HomePage() {
                 </div>
 
   
+              </div> 
+            </div>
+          </div>
+        </section>
+
+
+
+        <section>
+          <h3>Popular Questions</h3>
+          <div class="carousel-container">
+            <div class="section-body card-container" id="popular-questions-section">
+            
+              <div class="card">
+                <div class="card-description">
+                  <p>Algebra</p>
+                  <br>
+                  <br>
+                  <p>Contains nothing Lorem ipsum dolor sit amet. Sed amet porro ut sint distinctio At culpa beatae aut consequuntur facere in eveniet magni vel assumenda quia. Sed esse neque sed culpa quidem est velit aliquam. Aut ipsa labore quo iste illum aut molestiae quidem et recusandae soluta quo omnis dolor est facilis galisum! Qui nemo distinctio et sint excepturi est galisum expedita qui explicabo similique?Aut velit consequatur id fuga ipsum et vitae consectetur ut velit harum et aperiam aliquam ut dolore alias. Nam molestias minima et nemo alias aut voluptates consequatur hic cupiditate voluptatem ut autem voluptatem est porro repellendus est quia nisi.</p>
+                  <div class="fade-overlay"></div>
+                </div>
               </div>
 
-              
+              <div class="card">
+                <div class="card-description">
+                  <p>Physics</p>
+                  <br>
+                  <br>
+                  <p>Contains nothing Lorem ipsum dolor sit amet. Sed amet porro ut sint distinctio At culpa beatae aut consequuntur facere in eveniet magni vel assumenda quia. Sed esse neque sed culpa quidem est velit aliquam. Aut ipsa labore quo iste illum aut molestiae quidem et recusandae soluta quo omnis dolor est facilis galisum! Qui nemo distinctio et sint excepturi est galisum expedita qui explicabo similique?Aut velit consequatur id fuga ipsum et vitae consectetur ut velit harum et aperiam aliquam ut dolore alias. Nam molestias minima et nemo alias aut voluptates consequatur hic cupiditate voluptatem ut autem voluptatem est porro repellendus est quia nisi.</p>
+                  <div class="fade-overlay"></div>
+                </div>
+              </div>
 
-              
+              <div class="card">
+                <div class="card-description">
+                  <p>Spanish</p>
+                  <br>
+                  <br>
+                  <p>Contains nothing Lorem ipsum dolor sit amet. Sed amet porro ut sint distinctio At culpa beatae aut consequuntur facere in eveniet magni vel assumenda quia. Sed esse neque sed culpa quidem est velit aliquam. Aut ipsa labore quo iste illum aut molestiae quidem et recusandae soluta quo omnis dolor est facilis galisum! Qui nemo distinctio et sint excepturi est galisum expedita qui explicabo similique?Aut velit consequatur id fuga ipsum et vitae consectetur ut velit harum et aperiam aliquam ut dolore alias. Nam molestias minima et nemo alias aut voluptates consequatur hic cupiditate voluptatem ut autem voluptatem est porro repellendus est quia nisi.</p>
+                  <div class="fade-overlay"></div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
@@ -145,6 +185,7 @@ function HomePage() {
       let content = "";
       quizzes.forEach((element) => {
         content += createCardComponent(
+          element.quiz_id,
           element.title,
           element.description,
           element.questions.length
@@ -152,6 +193,90 @@ function HomePage() {
       });
 
       cardContainer.innerHTML = content;
+    } catch (error) {
+      console.error("Error loading quizzes:", error);
+    }
+  })();
+}
+
+function QuizPage(id) {
+  (async function loadQuizzes() {
+    try {
+      const quizzes = await fetchQuizzes();
+
+      const quiz = quizzes[id - 1];
+
+      const container = document.getElementById("dynamic-container");
+
+      // Check if container exists
+      if (!container) {
+        console.error("Container with id 'dynamic-container' not found.");
+        return;
+      }
+
+      const questions_string = JSON.stringify(quiz.questions);
+
+      container.innerHTML = `
+          <div>
+            <section id="quiz-header">
+              <h1>${quiz.title}</h1>
+              
+              <div id="quiz-reviews">
+                <ion-icon name="star"></ion-icon>
+                <p>5.0 (99 reviews)</p>
+              </div>
+
+              
+              
+            </section>
+  
+            <section class="flip-container" id="flashcard-board" onclick="flipBoard(this)">
+                  <div class="flipper">
+                    <div class="front">
+                      <p id="flashcard-text-term" class="flashcard-text">${
+                        quiz.questions[0].term
+                      }</p>
+                    </div>
+                    <div class="back">
+                      <p id="flashcard-text-definition" class="flashcard-text">${
+                        quiz.questions[0].definition
+                      }</p>
+                    </div>
+                  </div>
+            </section>
+
+            <section id="quiz-controls">
+              <div class="flash prev clickable" onclick='newFlashCard(${-1},${questions_string})' >
+                <ion-icon name="arrow-back"></ion-icon>
+              </div>
+              <div class="page-indicator">
+                <p id="question-number">1</p>
+                <p>/ ${quiz.questions.length}</p>
+              </div>
+              <div class="flash next clickable" onclick='newFlashCard(${1},${questions_string})' >
+                <ion-icon name="arrow-forward"></ion-icon>
+              </div>
+            </section>
+
+            <div class="indicator">
+              <div class="line-indicator-light">
+                <div class="line-indicator-dark"></div>
+              </div>
+            </div>
+
+
+            <div class="author-container">
+              <div class="author-profile">
+                <img src="https://api.multiavatar.com/Binx Bond.svg" >
+              </div>
+
+              <div class="author-name">
+                <p>Created by</p>
+                <h4>User11023</h4>
+              </div>
+
+            </div>
+          </div>`;
     } catch (error) {
       console.error("Error loading quizzes:", error);
     }

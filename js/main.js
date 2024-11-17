@@ -128,9 +128,9 @@ function deleteInputFlashcardComponent(id) {
   }
 }
 
-function createCardComponent(title, description, total) {
+function createCardComponent(id, title, description, total) {
   return `
-                <div class="card">
+                <div class="card" onclick="QuizPage(${id})">
 
                   <div class="card-title">
                     <h3>${title}</h3>
@@ -154,4 +154,36 @@ function createCardComponent(title, description, total) {
                   </div>
                 
                 </div>`;
+}
+
+function newFlashCard(direction, questions) {
+  const question_number_container = document.getElementById("question-number");
+  const current_number = parseInt(question_number_container.textContent, 10);
+  const flashcard_board_term = document.getElementById("flashcard-text-term");
+  const flashcard_board_definition = document.getElementById(
+    "flashcard-text-definition"
+  );
+
+  let content_term = flashcard_board_term.textContent;
+  let content_definition = flashcard_board_definition.textContent;
+
+  if (direction == -1 && current_number > 1) {
+    content_term = questions[current_number - 2].term;
+    content_definition = questions[current_number - 2].definition;
+    question_number_container.innerHTML = current_number - 1;
+  } else if (direction == 1 && current_number < questions.length) {
+    content_term = questions[current_number].term;
+    content_definition = questions[current_number].definition;
+    question_number_container.innerHTML = current_number + 1;
+  } else {
+    console.log("di na puydi");
+    return;
+  }
+
+  flashcard_board_term.innerHTML = content_term;
+  flashcard_board_definition.innerHTML = content_definition;
+}
+
+function flipBoard(element) {
+  element.classList.toggle("flipped");
 }

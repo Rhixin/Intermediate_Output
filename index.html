@@ -52,7 +52,7 @@
       <nav id="add-modal" class="modal">
         <a onclick="FlashcardPage()" class="clickable">
           <ion-icon name="reader-outline"></ion-icon>
-          Flashcard
+          Flashcard Set
         </a>
         <a onclick="checkJSON()" class="clickable">
           <ion-icon name="folder-outline" id="settings-icon"></ion-icon>
@@ -99,15 +99,15 @@
     <nav>
       <div>
         <ul>
-          <li>
+          <li onclick="HomePage()" class="clickable">
             <ion-icon name="home-outline" class="nav-icon"></ion-icon>
             <a class="collapse">Home</a>
           </li>
-          <li>
+          <li class="clickable">
             <ion-icon name="folder-outline" class="nav-icon"></ion-icon>
             <a class="collapse">Library</a>
           </li>
-          <li>
+          <li class="clickable">
             <ion-icon name="notifications-outline" class="nav-icon"></ion-icon>
             <a class="collapse">Notifications</a>
           </li>
@@ -120,11 +120,11 @@
         </div>
 
         <ul>
-          <li>
+          <li class="clickable" onclick="FlashcardPage()">
             <ion-icon name="albums-outline" class="nav-icon"></ion-icon>
             <a class="collapse">Flashcards</a>
           </li>
-          <li>
+          <li class="clickable">
             <ion-icon name="book-outline" class="nav-icon"></ion-icon>
             <a class="collapse">Expert Solutions</a>
           </li>
