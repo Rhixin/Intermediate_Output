@@ -21,12 +21,15 @@
           <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
         </div>
 
-        <div>
-          <img
-            src="images/logo_quizlet.png"
-            alt="quizlet logo"
-            id="header-logo"
-          />
+        <div class="clickable" onclick="HomePage()">
+          <picture>
+            <source srcset="images/Q-logo.jpg" media="(max-width: 450px)" />
+            <img
+              src="images/logo_quizlet.png"
+              alt="quizlet logo"
+              id="header-logo"
+            />
+          </picture>
         </div>
       </div>
 
@@ -42,7 +45,7 @@
       <div>
         <div id="add-icon" onclick="toggleAddModal()" class="clickable">
           <ion-icon name="add-outline"></ion-icon>
-          <p>Create Quiz</p>
+          <p class="collapsible">Create Quiz</p>
         </div>
         <div id="profile-icon" onclick="toggleProfileModal()" class="clickable">
           <ion-icon name="person-circle-outline"></ion-icon>

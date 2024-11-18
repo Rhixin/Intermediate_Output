@@ -257,6 +257,7 @@ main {
   flex: 1;
   flex-direction: column;
   padding: 4rem 2rem 0 2rem;
+  min-width: 15rem;
 }
 
 .container {
@@ -275,8 +276,7 @@ section {
 .card {
   flex: 1;
   border-radius: 10px;
-  height: 200px;
-  min-width: 24rem;
+  height: 15rem;
   border: 2px solid var(--gray-light-color);
   background-color: white;
   transition: border-bottom 0.3s ease, opacity 0.3s ease;
@@ -285,6 +285,7 @@ section {
   flex-direction: column;
   font-family: var(--font-secondary) !important;
   cursor: pointer;
+  min-width: 30rem;
 }
 
 .card-title {
@@ -299,6 +300,8 @@ section {
   border-radius: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 0 0.5rem;
 }
 
@@ -388,11 +391,6 @@ section {
 
 .next {
   right: 0;
-}
-
-#suggested-section,
-#popular-questions-section {
-  overflow-x: hidden;
 }
 
 /* ADD CARD PAGE SETTINGS */
@@ -632,6 +630,10 @@ textarea {
   background-color: white;
 }
 
+.flipper div {
+  padding: 0.5rem;
+}
+
 .front,
 .back {
   position: absolute;
@@ -649,4 +651,111 @@ textarea {
 
 .flip-container.flipped .flipper {
   transform: rotateY(180deg);
+}
+
+/* RESPONSIVE SETTINGS */
+
+@media (max-width: 1100px) {
+  .card {
+    flex: none;
+    width: 40%;
+  }
+
+  #suggested-section .card {
+    width: 60%;
+  }
+}
+@media (max-width: 900px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.6rem;
+  }
+  .collapsible {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #suggested-section .card {
+    width: 100%;
+  }
+
+  #quiz-header {
+    margin-bottom: 0;
+  }
+
+  #quiz-reviews ion-icon {
+    font-size: 0.8rem;
+  }
+
+  #flashcard-board {
+    height: 22rem;
+  }
+
+  #flashcard-board p {
+    font-size: 2rem;
+  }
+
+  #searchbar {
+    width: 10rem;
+  }
+
+  .flash {
+    padding: 0.3rem;
+  }
+
+  .flip-container {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    margin-left: 4.75rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #menu-bar {
+    display: none;
+  }
+
+  .collapse {
+    display: none;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #flashcard-board p {
+    font-size: 1rem;
+  }
+  #header-logo {
+    width: 2.5rem;
+    padding: 0;
+  }
+
+  #searchbar {
+    width: 8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #add-icon {
+    margin-right: 0;
+  }
 }

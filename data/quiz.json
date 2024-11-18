@@ -2,53 +2,87 @@
   {
     "quiz_id": 1,
     "title": "Basic Math",
-    "description": "Practice multiplication, addition, subtraction, and division",
+    "description": "Practice basic operations like addition, subtraction, multiplication, and division.",
     "questions": [
-      { "card_id": 1, "term": "What is 1 + 1", "definition": "2" },
-      { "card_id": 2, "term": "What is 5 * 1", "definition": "5" }
+      { "card_id": 1, "term": "What is 1 + 1?", "definition": "2" },
+      { "card_id": 2, "term": "What is 5 × 1?", "definition": "5" },
+      { "card_id": 3, "term": "What is 10 ÷ 2?", "definition": "5" },
+      { "card_id": 4, "term": "What is 7 − 3?", "definition": "4" }
     ]
   },
   {
     "quiz_id": 2,
     "title": "Science",
-    "description": "Study different types of cells",
+    "description": "Review about branch of science that deals with living organisms and their vital processes. Biology encompasses diverse fields, including botany, conservation, ecology, evolution, genetics, marine biology, medicine, microbiology, molecular biology, physiology, and zoology. Review about branch of science that deals with living organisms and their vital processes. Biology encompasses diverse fields, including botany, conservation, ecology, evolution, genetics, marine biology, medicine, microbiology, molecular biology, physiology, and zoology",
     "questions": [
       {
         "card_id": 1,
-        "term": "Powerhouse of the cell",
+        "term": "What is the powerhouse of the cell?",
         "definition": "Mitochondria"
       },
       {
         "card_id": 2,
-        "term": "What is Eukaryote",
-        "definition": "Only one idk"
+        "term": "What is a Eukaryote?",
+        "definition": "An organism whose cells contain a nucleus."
+      },
+      {
+        "card_id": 3,
+        "term": "What is the process of photosynthesis?",
+        "definition": "Conversion of light energy into chemical energy by plants."
       }
     ]
   },
   {
     "quiz_id": 3,
     "title": "Biology",
-    "description": "Review about branch of science that deals with living organisms and their vital processes. Biology encompasses diverse fields, including botany, conservation, ecology, evolution, genetics, marine biology, medicine, microbiology, molecular biology, physiology, and zoology. Review about branch of science that deals with living organisms and their vital processes. Biology encompasses diverse fields, including botany, conservation, ecology, evolution, genetics, marine biology, medicine, microbiology, molecular biology, physiology, and zoology",
+    "description": "Explore the study of living organisms and their processes.",
     "questions": [
       {
         "card_id": 1,
-        "term": "Cells",
-        "definition": "Basic building blocks of life and have many topics to discuss, including their structure, functions, and history"
+        "term": "What are cells?",
+        "definition": "The basic building blocks of life, responsible for all life processes."
       },
       {
         "card_id": 2,
-        "term": "Respiration",
-        "definition": "What is the process that releases carbon dioxide as a waste product in living things?"
+        "term": "What is respiration?",
+        "definition": "The process that releases energy from food and produces carbon dioxide as a waste product."
       },
       {
         "card_id": 3,
-        "term": "Kingdom, Phylum, Class, Order, Genus, Family, and Species",
-        "definition": "What are the taxonomic categories of living things from least specific to most specific?"
+        "term": "What are the taxonomic categories of living things from broadest to most specific?",
+        "definition": "Kingdom, Phylum, Class, Order, Family, Genus, Species."
       },
       {
         "card_id": 4,
-        "term": "Tooth Enamel",
-        "definition": "What is the hardest substance in the human body?"
+        "term": "What is the hardest substance in the human body?",
+        "definition": "Tooth enamel."
+      }
+    ]
+  },
+  {
+    "quiz_id": 4,
+    "title": "Geography",
+    "description": "Test your knowledge about countries and their capitals.",
+    "questions": [
+      {
+        "card_id": 1,
+        "term": "What is the capital of France?",
+        "definition": "Paris"
+      },
+      {
+        "card_id": 2,
+        "term": "What is the capital of Japan?",
+        "definition": "Tokyo"
+      },
+      {
+        "card_id": 3,
+        "term": "What is the largest continent?",
+        "definition": "Asia"
+      },
+      {
+        "card_id": 4,
+        "term": "What ocean is on the west coast of the United States?",
+        "definition": "Pacific Ocean"
       }
     ]
   }

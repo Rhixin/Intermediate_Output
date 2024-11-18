@@ -230,7 +230,7 @@ function QuizPage(id) {
               
             </section>
   
-            <section class="flip-container" id="flashcard-board" onclick="flipBoard(this)">
+            <section class="flip-container clickable" id="flashcard-board" onclick="flipBoard(this)">
                   <div class="flipper">
                     <div class="front">
                       <p id="flashcard-text-term" class="flashcard-text">${
