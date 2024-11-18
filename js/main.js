@@ -182,6 +182,13 @@ function newFlashCard(direction, questions) {
 
   flashcard_board_term.innerHTML = content_term;
   flashcard_board_definition.innerHTML = content_definition;
+
+  const totalPages = questions.length;
+  const currentPage = current_number + direction;
+  const indicatorWidth = (currentPage / totalPages) * 100;
+  document.querySelector(
+    ".line-indicator-dark"
+  ).style.width = `${indicatorWidth}%`;
 }
 
 function flipBoard(element) {

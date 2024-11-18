@@ -593,7 +593,7 @@ textarea {
 
 .line-indicator-dark {
   background-color: var(--gray-dark-color);
-  width: 50%;
+  width: 0%;
   height: 100%;
 }
 
