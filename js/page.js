@@ -175,7 +175,7 @@ function HomePage() {
         </section>
 
 
-        <!-- FOOTER -->
+        <!-- FOOTER SECTION -->
         <footer>
           <div class="footer-container">
             <div class="footer-section">
