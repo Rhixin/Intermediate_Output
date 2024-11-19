@@ -62,7 +62,7 @@ function HomePage() {
   }
 
   const content = `
-        <section>
+        <section id="quizzes">
           <h3>Recent</h3> 
             <div class="carousel-container">
               <button class="carousel-button prev" onclick="scrollSection(-1)">❮</button>
@@ -135,7 +135,7 @@ function HomePage() {
 
 
 
-        <section>
+        <section id="popular-questions">
           <h3>Popular Questions</h3>
           <div class="carousel-container">
             <div class="section-body card-container" id="popular-questions-section">
@@ -173,7 +173,57 @@ function HomePage() {
             </div>
           </div>
         </section>
-        `;
+
+
+        <!-- FOOTER -->
+        <footer>
+          <div class="footer-container">
+            <div class="footer-section">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#quizzes">About Quizlet</a></li>
+                <li><a href="#quizzes">Our Mission</a></li>
+                <li><a href="#quizzes">Team</a></li>
+                <li><a href="#quizzes">Careers</a></li>
+                <li><a href="#quizzes">Press</a></li>
+                <li><a href="#quizzes">Community Stories</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3>Products</h3>
+              <ul>
+                <li><a href="#popular-questions">Popular Questions</a></li>
+                <li><a href="#popular-questions">Quizzes</a></li>
+                <li><a href="#popular-questions">Learning Games</a></li>
+                <li><a href="#popular-questions">Study Sets</a></li>
+                <li><a href="#popular-questions">Mobile App</a></li>
+                <li><a href="#popular-questions">AI Study Assistant</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="#suggested-section">Help Center</a></li>
+                <li><a href="#suggested-section">Teacher Resources</a></li>
+                <li><a href="#suggested-section">Student Resources</a></li>
+                <li><a href="#suggested-section">Blog</a></li>
+                <li><a href="#suggested-section">Webinars</a></li>
+                <li><a href="#suggested-section">Developer API</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3>Support</h3>
+              <ul>
+                <li><a href="#suggested-section">Contact Support</a></li>
+                <li><a href="#suggested-section">FAQs</a></li>
+                <li><a href="#suggested-section">Report an Issue</a></li>
+                <li><a href="#suggested-section">Privacy Policy</a></li>
+                <li><a href="#suggested-section">Terms of Service</a></li>
+                <li><a href="#suggested-section">Accessibility</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>`;
 
   container.innerHTML = content;
 

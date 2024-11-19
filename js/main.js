@@ -194,3 +194,50 @@ function newFlashCard(direction, questions) {
 function flipBoard(element) {
   element.classList.toggle("flipped");
 }
+
+document
+  .getElementById("search-quiz")
+  .addEventListener("input", async (event) => {
+    try {
+      const data = await fetchQuizzes(); // Fetch quizzes from the database
+      const query = event.target.value.toLowerCase(); // Convert to lowercase for case-insensitive search
+
+      const search_results = document.getElementById("search-results");
+      search_results.classList.remove("hidden");
+
+      if (query.trim() === "") {
+        console.log("Search Results:", data); // Show all data if input is cleared
+        return;
+      }
+
+      // Filter the data based on the query
+      const filteredData = data.filter((quiz) =>
+        quiz.title.toLowerCase().includes(query)
+      );
+
+      console.log("Search Results:", filteredData);
+
+      let content = "";
+
+      if (filteredData.length == 0) {
+        content = `<span>No results</span>`;
+      } else {
+        filteredData.forEach((quiz) => {
+          content += `<span class="clickable" onclick="QuizPage(${quiz.quiz_id})">${quiz.title}</span>`;
+        });
+      }
+
+      search_results.innerHTML = content;
+    } catch (error) {
+      console.error("Error fetching quizzes or filtering data:", error);
+    }
+  });
+
+//TODO: DI NANUON MA CLICK KAY MAWALA ANG DIVVVV GRRRRRRRRR
+document.getElementById("search-quiz").addEventListener("blur", function () {
+  setTimeout(() => {
+    const search_results = document.getElementById("search-results");
+    search_results.classList.add("hidden");
+    console.log("nihawa nako");
+  }, 1000); // Delay para maclick
+});
